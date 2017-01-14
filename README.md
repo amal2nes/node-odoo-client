@@ -1,6 +1,11 @@
-# Odoo
+# Node-odoo-client
 
-Node.js client library for Odoo
+Node.js client library for Odoo.
+
+This is a fork of [saidimu/odoo](https://github.com/saidimu/odoo),
+which was itself a fork of [4yopping/node-odoo](https://github.com/4yopping/node-odoo).
+
+Many thanks to them for their work.
 
 ## Installation
 
@@ -56,7 +61,7 @@ var params = {
   fields: [ 'name', 'list_price', 'items' ],
   order: 'list_price',
   limit: 5,
-  offset: 0,  
+  offset: 0,
 }; //params
 odoo.search_read('product.product', params, function (err, products) {
   if (err) { return console.log(err); }
@@ -76,7 +81,7 @@ odoo.search_read('product.product', params, function (err, products) {
 var params = {
   fields: [ 'name', 'list_price'],
   limit: 5,
-  offset: 0,  
+  offset: 0,
 }; //params
 odoo.browse_by_id('product.product', params, function (err, products) {
   if (err) { return console.log(err); }
